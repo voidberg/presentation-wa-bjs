@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Autobots, assemble</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					# Autobots, assemble
+					![Autobots, assemble](images/autobots.gif)
+				</section>
+				<section data-markdown>
+					![Alexandru Badiu](images/profile.jpg)
+					### Alexandru Badiu
+					#### @ BEN / Drupal Romania
+				</section>
+				<section data-markdown>
+					# What
+				</section>
+				<section data-markdown>
+					* A new type of code  that browsers can run.
+					* Powered by a new VM.
+					* Powered by new APIs.
+				</section>
+				<section data-markdown>
+					* It's not "to the metal" like assembly.
+					* It's not asm.js.
+					* It is fast (20% slower than native).
+				</section>
+				<section data-markdown>
+					* It supplements Javascript, it does not replace it.
+					* A new compilation target for other languages.
+					* Still some things missing.
+				</section>
+				<section data-markdown>
+					# Why
+				</section>
+				<section data-markdown>
+					* It's new and interesting.
+					* It's already supported and used.
+					* While in flux, fairly stable.
+				</section>
+				<section data-markdown>
+					![Wasm support](images/support.png)
+				</section>
+				<section data-markdown>
+					* You need speed.
+					* You have code in another language that you want to reuse.
+					* You want to port an existing application.
+				</section>
+				<section data-markdown>
+					* Unity, Unreal, other game engines.
+					* Autocad, Figma.
+					* Sourcemaps parser in Firefox.
+				</section>
+				<section data-markdown>
+					* Ember.js core / Glimmer.js core (WIP).
+					* Add support for WebP in browsers.
+					* Lots of libraries ported (i.e. Bullet).
+				</section>
+				<section data-markdown>
+					# Why not
+				</section>
+				<section data-markdown>
+					* Still young and in flux.
+					* Only works with ints and floats.
+					* Single threaded.
+				</section>
+				<section data-markdown>
+					* No ECMASscript module integration.
+					* No GC.
+					* Harder to debug.
+				</section>
+				<section data-markdown>
+					# How
+				</section>
+				<section data-markdown>
+					* Most active languages: C / C++ and Rust (LLVM).
+					* Kotlin, FAUST, LUA, OCAML, Walt, Swift, C#, Java, Oxygene.
+					* AssemblyScript, Walt.
+					* Bare bones: .wat.
+				</section>
+				<section data-markdown>
+					* Write code, compile.
+					* Add to project and use.
+					* ???
+					* PROFIT!
+				</section>
+				<section data-markdown>
+					# Demos
+				</section>
+				<section data-markdown>
+					* Using WAT.
+					* Integrating C code.
+					* Integrating an external C library. 
+					* Native game, written in C.
+				</section>
+				<section data-markdown>
+					* Porting a C library.
+					* Rust.
+					* Walt and Webpack.
+				</section>
+				<section data-markdown>
+					## Thank you!
+					#### [andu@ctrlz.ro](mailto:andu@ctrlz.ro)
+					#### [@voidberg](https://twitter.com/voidberg)
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
